@@ -1,0 +1,4 @@
+CREATE TABLE `message` (
+  `id` BIGINT(20) NOT NULL AUTO_INCREMENT,
+  `message` VARCHAR(255) NOT NULL,
+  PRIMARY KEY (`id`));

@@ -1,0 +1,9 @@
+database:
+    url: jdbc:mysql://localhost:3306/test?useSSL=false
+    user: capint
+    password: testdata
+
+flyway:
+    driver: com.mysql.jdbc.Driver
+    user: migrate
+    password: testdatatest
