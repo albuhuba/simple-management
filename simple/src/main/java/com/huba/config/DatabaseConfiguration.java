@@ -1,4 +1,4 @@
-package com.huba.main.config;
+package com.huba.config;
 
 import static java.lang.Boolean.FALSE;
 import static java.lang.Boolean.TRUE;
