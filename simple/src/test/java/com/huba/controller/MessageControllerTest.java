@@ -11,6 +11,7 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.huba.controller.request.MessageBodyRequestDTO;
 
 /**
@@ -32,7 +33,7 @@ public class MessageControllerTest {
 	private MessageController controller;
 
 	@Test
-	public void messageCreationDelegated() {
+	public void messageCreationDelegated() throws JsonProcessingException {
 		MessageBodyRequestDTO mock = mock(MessageBodyRequestDTO.class);
 		doReturn(EMPTY_JSON_MESSAGE).when(mock).getMessage();
 		controller.createMessage(mock);
