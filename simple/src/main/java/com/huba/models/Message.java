@@ -1,4 +1,4 @@
-package com.huba.model;
+package com.huba.models;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

@@ -31,6 +31,9 @@
 
 		<tomcat-version>8.5.6</tomcat-version>
 
+		<atmosphere-spring-version>2.4.3</atmosphere-spring-version>
+
+		<mockito-version>2.2.9</mockito-version>
 		<junit-version>4.9</junit-version>
 	</properties>
 
@@ -132,7 +135,19 @@
 			<artifactId>jackson-dataformat-yaml</artifactId>
 			<version>${jackson-version}</version>
 		</dependency>
+		
+		<dependency>
+			<groupId>com.vaadin.external.atmosphere</groupId>
+			<artifactId>atmosphere-runtime</artifactId>
+			<version>1.0.18.vaadin3</version>
+		</dependency>
 
+		<dependency>
+			<groupId>org.atmosphere</groupId>
+			<artifactId>atmosphere-spring</artifactId>
+			<version>${atmosphere-spring-version}</version>
+		</dependency>
+		
 		<!-- Test dependencies -->
 		<dependency>
 			<groupId>junit</groupId>
@@ -140,6 +155,11 @@
 			<version>${junit-version}</version>
 			<scope>test</scope>
 		</dependency>
-
+		<dependency>
+			<groupId>org.mockito</groupId>
+			<artifactId>mockito-core</artifactId>
+			<version>${mockito-version}</version>
+			<scope>test</scope>
+		</dependency>
 	</dependencies>
 </project>

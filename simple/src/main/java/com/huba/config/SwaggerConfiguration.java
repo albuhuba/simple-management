@@ -1,4 +1,4 @@
-package com.huba.main.config;
+package com.huba.config;
 
 import static springfox.documentation.builders.PathSelectors.regex;
 
