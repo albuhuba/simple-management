@@ -1,5 +1,7 @@
 package com.huba.controller.request;
 
+import javax.validation.constraints.NotNull;
+
 import org.hibernate.validator.constraints.NotEmpty;
 
 /**
@@ -11,6 +13,7 @@ import org.hibernate.validator.constraints.NotEmpty;
 public class MessageBodyRequestDTO {
 
 	@NotEmpty
+	@NotNull
 	private String message;
 
 	public String getMessage() {

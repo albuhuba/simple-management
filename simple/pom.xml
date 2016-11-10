@@ -2,13 +2,14 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>simple</groupId>
-	<artifactId>simple</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<name>Simple Management</name>
 	<url>http://maven.apache.org</url>
+
+	<groupId>com.huba</groupId>
+    <artifactId>com.huba</artifactId>
+    <version>0.1.0</version>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -30,8 +31,6 @@
 		<jackson-version>2.8.3</jackson-version>
 
 		<tomcat-version>8.5.6</tomcat-version>
-
-		<atmosphere-spring-version>2.4.3</atmosphere-spring-version>
 
 		<mockito-version>2.2.9</mockito-version>
 		<junit-version>4.9</junit-version>
@@ -113,11 +112,11 @@
 			<artifactId>tomcat-embed-core</artifactId>
 			<version>${tomcat-version}</version>
 			<exclusions>
-					<exclusion>
-						<artifactId>slf4j-api</artifactId>
-						<groupId>org.slf4j</groupId>
-					</exclusion>
-				</exclusions>
+				<exclusion>
+					<artifactId>slf4j-api</artifactId>
+					<groupId>org.slf4j</groupId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 
 		<dependency>
@@ -135,19 +134,42 @@
 			<artifactId>jackson-dataformat-yaml</artifactId>
 			<version>${jackson-version}</version>
 		</dependency>
-		
+
+		<!-- Wbesocket dependencies -->
 		<dependency>
-			<groupId>com.vaadin.external.atmosphere</groupId>
-			<artifactId>atmosphere-runtime</artifactId>
-			<version>1.0.18.vaadin3</version>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-websocket</artifactId>
+			<version>${spring-boot-version}</version>
 		</dependency>
 
 		<dependency>
-			<groupId>org.atmosphere</groupId>
-			<artifactId>atmosphere-spring</artifactId>
-			<version>${atmosphere-spring-version}</version>
+			<groupId>org.webjars</groupId>
+			<artifactId>webjars-locator</artifactId>
+			<version>0.9</version>
 		</dependency>
 		
+		<dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>sockjs-client</artifactId>
+			<version>1.0.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>stomp-websocket</artifactId>
+			<version>2.3.3</version>
+		</dependency>
+		<dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>bootstrap</artifactId>
+			<version>3.3.7</version>
+		</dependency>
+		<dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>jquery</artifactId>
+			<version>3.1.0</version>
+		</dependency>
+		<!-- end of websocket dependencies -->
+
 		<!-- Test dependencies -->
 		<dependency>
 			<groupId>junit</groupId>

@@ -73,9 +73,9 @@ public class SwaggerConfiguration {
 	private ApiInfo apiInfo() {
 		// @formatter:off
 		return new ApiInfoBuilder().
-				title("ViaBill API").
-				description("This is documentation for ViaBill's API").
-				contact(new Contact("viabill.com", "", "")).
+				title("Huba Public API").
+				description("This is documentation for the simple messagin API").
+				contact(new Contact("albuhuba@yahoo.com", "", "")).
 				version("0.0.1-SNAPSHOT").
 				build();
 		// @formatter:on
