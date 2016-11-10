@@ -51,4 +51,9 @@ public class SimpleMessageService {
 		}).collect(Collectors.toList());
 	}
 
+	@VisibleForTesting
+	void setObjectMapper(ObjectMapper objectMapper) {
+		this.objectMapper = objectMapper;
+	}
+
 }

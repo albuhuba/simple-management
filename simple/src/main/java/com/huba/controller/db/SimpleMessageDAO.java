@@ -5,8 +5,6 @@ import java.util.List;
 import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -21,8 +19,6 @@ import com.huba.models.Message;
 @Service
 public class SimpleMessageDAO {
 
-	private static final Logger LOG = LoggerFactory.getLogger(SimpleMessageDAO.class);
-
 	@Autowired
 	private SessionFactory sessionFactory;
 
@@ -36,7 +32,6 @@ public class SimpleMessageDAO {
 
 	@SuppressWarnings("unchecked")
 	public List<Message> getMessages() {
-		Criteria criteria = currentSession().createCriteria(Message.class);
-		return criteria.list();
+		return currentSession().createCriteria(Message.class).list();
 	}
 }

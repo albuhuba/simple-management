@@ -2,13 +2,14 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>simple</groupId>
-	<artifactId>simple</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
 	<name>Simple Management</name>
 	<url>http://maven.apache.org</url>
+
+	<groupId>com.huba</groupId>
+    <artifactId>com.huba</artifactId>
+    <version>0.1.0</version>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -146,6 +147,7 @@
 			<artifactId>webjars-locator</artifactId>
 			<version>0.9</version>
 		</dependency>
+		
 		<dependency>
 			<groupId>org.webjars</groupId>
 			<artifactId>sockjs-client</artifactId>

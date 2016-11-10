@@ -1,15 +1,21 @@
 package com.huba.controller;
 
+import static org.junit.Assert.assertEquals;
+import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.doReturn;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.runners.MockitoJUnitRunner;
+import org.springframework.messaging.simp.SimpMessagingTemplate;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.huba.controller.request.MessageBodyRequestDTO;
@@ -29,6 +35,9 @@ public class MessageControllerTest {
 	@Mock
 	private SimpleMessageService service;
 
+	@Mock
+	private SimpMessagingTemplate template;
+
 	@InjectMocks
 	private MessageController controller;
 
@@ -39,6 +48,20 @@ public class MessageControllerTest {
 		controller.createMessage(mock);
 
 		verify(service).createMessage(eq((String) null));
+		verify(template).convertAndSend(any(String.class), eq((Object) null));
+	}
+
+	@Test
+	public void getMessages() {
+		List<MessageRO> originalMessages = new ArrayList<>();
+		MessageRO message = new MessageRO();
+		message.setMessage("Message");
+		originalMessages.add(message);
+		doReturn(originalMessages).when(service).getMessages();
+
+		List<MessageRO> messages = controller.getAllMessages();
+
+		assertEquals(new Integer(1), new Integer(messages.size()));
 	}
 
 }
