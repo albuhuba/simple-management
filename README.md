@@ -2,6 +2,8 @@
 
 It has got 2 endpoints one for storing a sinmple json message and one to retrieve all of them. Additionally in the same time before it is saved, through a dispatcher (websockets) it sends to the registered clients the added message.
 
+I haven't included any endpoints in this description, it is visible in the code and it is not that hard to find it.
+
 It uses websockets to send simple messages to the subscribed clients and shows the raw text in a list view.
 
 The SpringBoot is the basis of the application and on top of that a couple of frameworks are working together to fulfill the soul of this project. Dor data storage I've used HIbernate 5 without the JPA2 Criteria api and the validations from this framework. To ensure that the database is in a correct state it is configured to validate at startup. Also in the same time not to have migration problems, I am using Flyway by boxfuse. After executing an initial script, the update scripts are taken from the classpath, from a specific location.
