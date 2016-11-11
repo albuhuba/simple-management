@@ -32,6 +32,11 @@
 
 		<tomcat-version>8.5.6</tomcat-version>
 
+		<webjar-locator-version>0.32</webjar-locator-version>
+		<sockjs-client-version>1.0.2</sockjs-client-version>
+		<stom-websocket-version>2.3.3</stom-websocket-version>
+		<webjars-bootstrap-version>3.3.7</webjars-bootstrap-version>
+		<webjars-jquery-version>3.1.0</webjars-jquery-version>
 		<mockito-version>2.2.9</mockito-version>
 		<junit-version>4.9</junit-version>
 	</properties>
@@ -145,28 +150,28 @@
 		<dependency>
 			<groupId>org.webjars</groupId>
 			<artifactId>webjars-locator</artifactId>
-			<version>0.9</version>
+			<version>${webjar-locator-version}</version>
 		</dependency>
 		
 		<dependency>
 			<groupId>org.webjars</groupId>
 			<artifactId>sockjs-client</artifactId>
-			<version>1.0.2</version>
+			<version>${sockjs-client-version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.webjars</groupId>
 			<artifactId>stomp-websocket</artifactId>
-			<version>2.3.3</version>
+			<version>${stom-websocket-version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.webjars</groupId>
 			<artifactId>bootstrap</artifactId>
-			<version>3.3.7</version>
+			<version>${webjars-bootstrap-version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.webjars</groupId>
 			<artifactId>jquery</artifactId>
-			<version>3.1.0</version>
+			<version>${webjars-jquery-version}</version>
 		</dependency>
 		<!-- end of websocket dependencies -->
 
