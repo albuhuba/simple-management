@@ -7,7 +7,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 import com.google.common.base.Predicate;
-import com.google.common.collect.Lists;
 
 import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.service.ApiInfo;
@@ -32,19 +31,13 @@ public class SwaggerConfiguration {
 	}
 
 	@Bean
-	public Docket authGroup() {
-		return new Docket(DocumentationType.SWAGGER_2).groupName("common").enable(enabled).apiInfo(apiInfo()).select().paths(commonPaths()).build();
-	}
-
-	@Bean
-	public Docket commonGroup() {
+	public Docket apiPublic() {
 		return new Docket(DocumentationType.SWAGGER_2)
-				.securitySchemes(Lists.newArrayList(apiKey()))
-				.groupName("common-api")
+				.groupName("api-public")
 				.enable(enabled)
 				.apiInfo(apiInfo())
 				.select()
-				.paths(commonPaths())
+				.paths(apiPublicPaths())
 				.build();
 	}
 
@@ -63,11 +56,11 @@ public class SwaggerConfiguration {
 	}
 
 	private Predicate<String> allPaths() {
-		return regex("/(common)/.*");
+		return regex("/(api-public)/.*");
 	}
 
-	private Predicate<String> commonPaths() {
-		return regex("/common/.*");
+	private Predicate<String> apiPublicPaths() {
+		return regex("/api-public/.*");
 	}
 
 	private ApiInfo apiInfo() {
