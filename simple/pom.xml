@@ -32,7 +32,7 @@
 
 		<tomcat-version>8.5.6</tomcat-version>
 
-		<webjar-locator-version>0.32</webjar-locator-version>
+		<webjar-locator-version>0.41</webjar-locator-version>
 		<sockjs-client-version>1.0.2</sockjs-client-version>
 		<stom-websocket-version>2.3.3</stom-websocket-version>
 		<webjars-bootstrap-version>3.3.7</webjars-bootstrap-version>
