@@ -22,7 +22,7 @@
 		<springfox-version>2.10.0</springfox-version>
 		<swagger-version>2.1.2</swagger-version>
 
-		<hibernate-version>5.2.2.Final</hibernate-version>
+		<hibernate-version>5.5.7.Final</hibernate-version>
 		<hibernate-validator-version>5.2.1.Final</hibernate-validator-version>
 		<hikaricp-version>2.4.5</hikaricp-version>
 		<slf4j-version>1.7.19</slf4j-version>
