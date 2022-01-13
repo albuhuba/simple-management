@@ -62,7 +62,7 @@ public class SimpleMessageServiceTest {
 	@Test
 	public void properMessageBody() {
 		service.createMessage(EMPTY_JSON_MESSAGE);
-
+		// TODO
 		verify(messageDao).save(any(Message.class));
 	}
 
