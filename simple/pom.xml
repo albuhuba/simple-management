@@ -16,7 +16,7 @@
 		<java.source-version>1.8</java.source-version>
 		<java.target-version>1.8</java.target-version>
 
-		<spring-version>5.2.19.RELEASE</spring-version>
+		<spring-version>5.3.14</spring-version>
 		<spring-boot-version>2.6.2</spring-boot-version>
 
 		<flyway-version>3.2.1</flyway-version>
